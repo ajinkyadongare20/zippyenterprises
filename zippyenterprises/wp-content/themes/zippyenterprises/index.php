@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file
  * Template Name: Home
@@ -19,52 +20,51 @@ get_header();
 <div class="container-fluid pt-5 bg-primary hero-header mb-5">
     <div class="container pt-5">
         <div class="row g-5 pt-5">
-
-            <?php 
-                $home_banner_tag        = get_field('home_banner_tag_name');
-                $home_banner_heading    = get_field('home_banner_heading_name');
-                $home_banner_desc       = get_field('home_banner_description_text');
-                $home_banner_btn1_url   = get_field('home_banner_read_more_btn');     
-                $home_banner_btn1_text  = get_field('home_banner_read_more_text');
-                $home_banner_btn2_url   = get_field('home_banner_contact_us_btn');    
-                $home_banner_btn2_text  = get_field('home_banner_contact_us_text');
-                $home_banner_image_url  = get_field('home_banner_image');             
+            <?php
+            $home_banner_tag        = get_field('home_banner_tag_name');
+            $home_banner_heading    = get_field('home_banner_heading_name');
+            $home_banner_desc       = get_field('home_banner_description_text');
+            $home_banner_btn1_url   = get_field('home_banner_read_more_btn');
+            $home_banner_btn1_text  = get_field('home_banner_read_more_text');
+            $home_banner_btn2_url   = get_field('home_banner_contact_us_btn');
+            $home_banner_btn2_text  = get_field('home_banner_contact_us_text');
+            $home_banner_image_url  = get_field('home_banner_image');
             ?>
 
             <!-- Left Content -->
             <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
 
-                <?php if($home_banner_tag): ?>
+                <?php if ($home_banner_tag): ?>
                     <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated fadeInLeftBig">
                         <?= esc_html($home_banner_tag); ?>
                     </div>
                 <?php endif; ?>
 
-                <?php if($home_banner_heading): ?>
+                <?php if ($home_banner_heading): ?>
                     <h1 class="display-4 text-white mb-4 animated fadeInLeftBig">
                         <?= esc_html($home_banner_heading); ?>
                     </h1>
                 <?php endif; ?>
 
-                <?php if($home_banner_desc): ?>
+                <?php if ($home_banner_desc): ?>
                     <div class="text-white mb-4 animated fadeInLeftBig">
                         <?= wp_kses_post($home_banner_desc); ?>
                     </div>
                 <?php endif; ?>
 
                 <!-- Read More Button -->
-                <?php if($home_banner_btn1_url && $home_banner_btn1_text): ?>
-                    <a href="<?= esc_url($home_banner_btn1_url); ?>" 
-                       class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated fadeInLeftBig">
-                       <?= esc_html($home_banner_btn1_text); ?>
+                <?php if ($home_banner_btn1_url && $home_banner_btn1_text): ?>
+                    <a href="<?= esc_url($home_banner_btn1_url); ?>"
+                        class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated fadeInLeftBig">
+                        <?= esc_html($home_banner_btn1_text); ?>
                     </a>
                 <?php endif; ?>
 
                 <!-- Contact Us Button -->
-                <?php if($home_banner_btn2_url && $home_banner_btn2_text): ?>
+                <?php if ($home_banner_btn2_url && $home_banner_btn2_text): ?>
                     <a href="<?= esc_url($home_banner_btn2_url); ?>"
-                       class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated fadeInLeftBig">
-                       <?= esc_html($home_banner_btn2_text); ?>
+                        class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated fadeInLeftBig">
+                        <?= esc_html($home_banner_btn2_text); ?>
                     </a>
                 <?php endif; ?>
 
@@ -72,7 +72,7 @@ get_header();
 
             <!-- Right Image -->
             <div class="col-lg-6 align-self-end text-center text-lg-end wow fadeInRightBig">
-                <?php if($home_banner_image_url): ?>
+                <?php if ($home_banner_image_url): ?>
                     <img class="img-fluid" src="<?= esc_url($home_banner_image_url); ?>" alt="">
                 <?php endif; ?>
             </div>
@@ -103,29 +103,29 @@ get_header();
 </div>
 <!-- Full Screen Search End -->
 
-    
+
 <!-- About Start -->
 <div class="container-fluid py-5">
     <div class="container">
         <div class="row g-5 align-items-center">
 
-            <?php 
-                $home_about_image          = get_field('home_about_image'); // URL
-                $home_about_us_tag        = get_field('home_about_us_tag');
-                $home_about_us_text_heading = get_field('home_about_us_text_heading');
-                $home_about_description    = get_field('home_about_description');
-                $home_about_heading_1      = get_field('home_about_heading_1');
-                $home_about_heading_2      = get_field('home_about_heading_2');
-                $home_about_heading_3      = get_field('home_about_heading_3');
-                $home_about_heading_4      = get_field('home_about_heading_4');
-                $home_about_read_more_btn       = get_field('home_about_read_more_btn'); // URL
-                $home_about_read_more_btn_text  = get_field('home_about_read_more_btn_text');
+            <?php
+            $home_about_image          = get_field('home_about_image'); // URL
+            $home_about_us_tag        = get_field('home_about_us_tag');
+            $home_about_us_text_heading = get_field('home_about_us_text_heading');
+            $home_about_description    = get_field('home_about_description');
+            $home_about_heading_1      = get_field('home_about_heading_1');
+            $home_about_heading_2      = get_field('home_about_heading_2');
+            $home_about_heading_3      = get_field('home_about_heading_3');
+            $home_about_heading_4      = get_field('home_about_heading_4');
+            $home_about_read_more_btn       = get_field('home_about_read_more_btn'); // URL
+            $home_about_read_more_btn_text  = get_field('home_about_read_more_btn_text');
             ?>
 
             <!-- Left Image -->
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                 <div class="about-img">
-                    <?php if($home_about_image): ?>
+                    <?php if ($home_about_image): ?>
                         <img class="img-fluid" src="<?= esc_url($home_about_image); ?>" alt="">
                     <?php endif; ?>
                 </div>
@@ -134,37 +134,37 @@ get_header();
             <!-- Right Content -->
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
 
-                <?php if($home_about_us_tag): ?>
+                <?php if ($home_about_us_tag): ?>
                     <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">
                         <?= esc_html($home_about_us_tag); ?>
                     </div>
                 <?php endif; ?>
 
-                <?php if($home_about_us_text_heading): ?>
+                <?php if ($home_about_us_text_heading): ?>
                     <h1 class="mb-4"><?= esc_html($home_about_us_text_heading); ?></h1>
                 <?php endif; ?>
 
-                <?php if($home_about_description): ?>
+                <?php if ($home_about_description): ?>
                     <p class="mb-4"><?= wp_kses_post($home_about_description); ?></p>
                 <?php endif; ?>
 
                 <div class="row g-3">
                     <div class="col-sm-6">
-                        <?php if($home_about_heading_1): ?>
+                        <?php if ($home_about_heading_1): ?>
                             <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i><?= esc_html($home_about_heading_1); ?></h6>
                         <?php endif; ?>
 
-                        <?php if($home_about_heading_2): ?>
+                        <?php if ($home_about_heading_2): ?>
                             <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i><?= esc_html($home_about_heading_2); ?></h6>
                         <?php endif; ?>
                     </div>
 
                     <div class="col-sm-6">
-                        <?php if($home_about_heading_3): ?>
+                        <?php if ($home_about_heading_3): ?>
                             <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i><?= esc_html($home_about_heading_3); ?></h6>
                         <?php endif; ?>
 
-                        <?php if($home_about_heading_4): ?>
+                        <?php if ($home_about_heading_4): ?>
                             <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i><?= esc_html($home_about_heading_4); ?></h6>
                         <?php endif; ?>
                     </div>
@@ -173,9 +173,9 @@ get_header();
                 <div class="d-flex align-items-center mt-4">
 
                     <!-- Read More button -->
-                    <?php if($home_about_read_more_btn && $home_about_read_more_btn_text): ?>
-                        <a class="btn btn-primary rounded-pill px-4 me-3" 
-                           href="<?= esc_url($home_about_read_more_btn); ?>">
+                    <?php if ($home_about_read_more_btn && $home_about_read_more_btn_text): ?>
+                        <a class="btn btn-primary rounded-pill px-4 me-3"
+                            href="<?= esc_url($home_about_read_more_btn); ?>">
                             <?= esc_html($home_about_read_more_btn_text); ?>
                         </a>
                     <?php endif; ?>
@@ -201,13 +201,13 @@ get_header();
             <!-- Left Section: ACF Dynamic Content -->
             <div class="col-lg-5 wow fadeInLeftBig" data-wow-delay="0.1s">
 
-                <?php 
-                    $home_our_services_tag               = get_field('home_services_tag');
-                    $home_our_services_heading           = get_field('home_services_text_heading');
-                    $home_our_services_description       = get_field('home_services_text_description');
+                <?php
+                $home_our_services_tag               = get_field('home_services_tag');
+                $home_our_services_heading           = get_field('home_services_text_heading');
+                $home_our_services_description       = get_field('home_services_text_description');
 
-                    $home_our_services_btn_url           = get_field('home_services_read_more_btn');
-                    $home_our_services_btn_text          = get_field('home_services_read_more_btn_text');
+                $home_our_services_btn_url           = get_field('home_services_read_more_btn');
+                $home_our_services_btn_text          = get_field('home_services_read_more_btn_text');
                 ?>
 
                 <?php if ($home_our_services_tag): ?>
@@ -225,8 +225,8 @@ get_header();
                 <?php endif; ?>
 
                 <?php if ($home_our_services_btn_url && $home_our_services_btn_text): ?>
-                    <a class="btn btn-primary rounded-pill px-4" 
-                       href="<?= esc_url($home_our_services_btn_url); ?>">
+                    <a class="btn btn-primary rounded-pill px-4"
+                        href="<?= esc_url($home_our_services_btn_url); ?>">
                         <?= esc_html($home_our_services_btn_text); ?>
                     </a>
                 <?php endif; ?>
@@ -237,29 +237,29 @@ get_header();
             <div class="col-lg-7">
                 <div class="row g-4">
 
-                    <?php 
-                        $args = array(
-                            'post_type'      => 'home_our_services',
-                            'posts_per_page' => 4,
-                            'order'          => 'ASC'
-                        );
+                    <?php
+                    $args = array(
+                        'post_type'      => 'home_our_services',
+                        'posts_per_page' => 4,
+                        'order'          => 'ASC'
+                    );
 
-                        $home_our_services_loop = new WP_Query($args);
-                        $delay = 0.1;
+                    $home_our_services_loop = new WP_Query($args);
+                    $delay = 0.1;
                     ?>
 
                     <?php if ($home_our_services_loop->have_posts()): $count = 0; ?>
                         <?php while ($home_our_services_loop->have_posts()): $home_our_services_loop->the_post(); ?>
 
-                            <?php 
-                                $home_our_services_icon                 = get_field('home_services_icon');
-                                $home_our_services_heading_name         = get_field('home_services_haeding_name');
-                                $home_our_services_heading_description  = get_field('home_services_haeding_description');
-                                $home_our_services_link_btn             = get_field('home_services_link_btn');
-                                $home_our_services_link_btn_text        = get_field('home_services_link_btn_text');
+                            <?php
+                            $home_our_services_icon                 = get_field('home_services_icon');
+                            $home_our_services_heading_name         = get_field('home_services_haeding_name');
+                            $home_our_services_heading_description  = get_field('home_services_haeding_description');
+                            $home_our_services_link_btn             = get_field('home_services_link_btn');
+                            $home_our_services_link_btn_text        = get_field('home_services_link_btn_text');
 
-                                $delay_value = $delay . 's';
-                                $delay += 0.2;
+                            $delay_value = $delay . 's';
+                            $delay += 0.2;
                             ?>
 
                             <div class="col-md-6 <?= ($count >= 2) ? 'pt-md-4' : ''; ?>">
@@ -292,7 +292,9 @@ get_header();
                                 </div>
                             </div>
 
-                        <?php $count++; endwhile; wp_reset_postdata(); ?>
+                        <?php $count++;
+                        endwhile;
+                        wp_reset_postdata(); ?>
                     <?php endif; ?>
 
                 </div>
@@ -310,20 +312,20 @@ get_header();
         <div class="row g-5">
 
             <?php
-                $home_feature_tag                = get_field('home_feature_tag');
-                $home_feature_heading_text       = get_field('home_feature_heading_text');
-                $home_feature_description_text   = get_field('home_feature_description_text');
-                $home_feature_point_1            = get_field('home_feature_point_1');
-                $home_feature_point_2            = get_field('home_feature_point_2');
-                $home_feature_point_3            = get_field('home_feature_point_3');
-                $home_feature_point_4            = get_field('home_feature_point_4');
-                $home_feature_counter_1_icon     = get_field('home_feature_counter_1_icon');
-                $home_feature_counter_1_value    = get_field('home_feature_counter_1_value');
-                $home_feature_counter_1_tittle   = get_field('home_feature_counter_1_tittle');
-                $home_feature_counter_2_icon     = get_field('home_feature_counter_2_icon');
-                $home_feature_counter_2_value    = get_field('home_feature_counter_2_value');
-                $home_feature_counter_2_tittle   = get_field('home_feature_counter_2_tittle');
-                $home_feature_right_image        = get_field('home_feature_right_image'); // image url
+            $home_feature_tag                = get_field('home_feature_tag');
+            $home_feature_heading_text       = get_field('home_feature_heading_text');
+            $home_feature_description_text   = get_field('home_feature_description_text');
+            $home_feature_point_1            = get_field('home_feature_point_1');
+            $home_feature_point_2            = get_field('home_feature_point_2');
+            $home_feature_point_3            = get_field('home_feature_point_3');
+            $home_feature_point_4            = get_field('home_feature_point_4');
+            $home_feature_counter_1_icon     = get_field('home_feature_counter_1_icon');
+            $home_feature_counter_1_value    = get_field('home_feature_counter_1_value');
+            $home_feature_counter_1_tittle   = get_field('home_feature_counter_1_tittle');
+            $home_feature_counter_2_icon     = get_field('home_feature_counter_2_icon');
+            $home_feature_counter_2_value    = get_field('home_feature_counter_2_value');
+            $home_feature_counter_2_tittle   = get_field('home_feature_counter_2_tittle');
+            $home_feature_right_image        = get_field('home_feature_right_image'); // image url
             ?>
 
             <!-- Left Section -->
@@ -434,12 +436,12 @@ get_header();
     <div class="container py-5">
 
         <?php
-            $case_study_heading_tag  = get_field('case_study_heading_tag');
-            $case_study_heading_text = get_field('case_study_heading_text');
+        $case_study_heading_tag  = get_field('case_study_heading_tag');
+        $case_study_heading_text = get_field('case_study_heading_text');
         ?>
 
         <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-            
+
             <?php if ($case_study_heading_tag): ?>
                 <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">
                     <?= esc_html($case_study_heading_tag); ?>
@@ -455,27 +457,27 @@ get_header();
         <div class="row g-4">
 
             <?php
-                $args = array(
-                    'post_type'      => 'case_study',
-                    'posts_per_page' => 3,
-                    'order'          => 'ASC'
-                );
-                $caseStudies = new WP_Query($args);
-                $delay = 0.3;
+            $args = array(
+                'post_type'      => 'case_study',
+                'posts_per_page' => 3,
+                'order'          => 'ASC'
+            );
+            $caseStudies = new WP_Query($args);
+            $delay = 0.3;
             ?>
 
             <?php if ($caseStudies->have_posts()): ?>
                 <?php while ($caseStudies->have_posts()): $caseStudies->the_post(); ?>
 
-                    <?php 
-                        $case_study_image             = get_field('case_study_image');
-                        $case_study_page_link         = get_field('case_study_page_link');
-                        $case_study_heading_text_item = get_field('case_study_heading_text');
-                        $case_study_description_text  = get_field('case_study_description_text');
-                        $case_study_icon              = get_field('case_study_icon');
+                    <?php
+                    $case_study_image             = get_field('case_study_image');
+                    $case_study_page_link         = get_field('case_study_page_link');
+                    $case_study_heading_text_item = get_field('case_study_heading_text');
+                    $case_study_description_text  = get_field('case_study_description_text');
+                    $case_study_icon              = get_field('case_study_icon');
 
-                        $delay_value = $delay . 's';
-                        $delay += 0.2;
+                    $delay_value = $delay . 's';
+                    $delay += 0.2;
                     ?>
 
                     <div class="col-lg-4 wow fadeInLeftBig" data-wow-delay="<?= esc_attr($delay_value); ?>">
@@ -505,7 +507,8 @@ get_header();
                         </div>
                     </div>
 
-                <?php endwhile; wp_reset_postdata(); ?>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
             <?php endif; ?>
         </div>
     </div>
@@ -517,9 +520,9 @@ get_header();
 <div class="container-fluid py-5">
     <div class="container py-5">
 
-        <?php 
-            $faq_heading      = get_field('faq_heading');
-            $faq_heading_text = get_field('faq_heading_text');
+        <?php
+        $faq_heading      = get_field('faq_heading');
+        $faq_heading_text = get_field('faq_heading_text');
         ?>
 
         <!-- Section Heading -->
@@ -535,22 +538,22 @@ get_header();
             <?php endif; ?>
         </div>
 
-        <?php 
-            // Fetch all FAQ CPT posts
-            $faq_args = array(
-                'post_type'      => 'faqs_cpt',   // your single CPT name
-                'posts_per_page' => -1,
-                'order'          => 'ASC'
-            );
-            $faqs = new WP_Query($faq_args);
+        <?php
+        // Fetch all FAQ CPT posts
+        $faq_args = array(
+            'post_type'      => 'faqs_cpt',   // your single CPT name
+            'posts_per_page' => -1,
+            'order'          => 'ASC'
+        );
+        $faqs = new WP_Query($faq_args);
 
-            // Convert FAQs into array for indexing
-            $faq_items = $faqs->posts;
-            $total     = count($faq_items);
+        // Convert FAQs into array for indexing
+        $faq_items = $faqs->posts;
+        $total     = count($faq_items);
 
-            // First 4 go left, rest go right
-            $left_faqs  = array_slice($faq_items, 0, 4);
-            $right_faqs = array_slice($faq_items, 4);
+        // First 4 go left, rest go right
+        $left_faqs  = array_slice($faq_items, 0, 4);
+        $right_faqs = array_slice($faq_items, 4);
         ?>
 
         <div class="row">
@@ -559,7 +562,7 @@ get_header();
             <div class="col-lg-6">
                 <div class="accordion" id="accordionFAQ1">
 
-                    <?php 
+                    <?php
                     $i = 1;
                     foreach ($left_faqs as $post):
                         setup_postdata($post);
@@ -588,8 +591,8 @@ get_header();
                             </div>
                         </div>
 
-                    <?php 
-                    $i++;
+                    <?php
+                        $i++;
                     endforeach;
                     wp_reset_postdata();
                     ?>
@@ -601,7 +604,7 @@ get_header();
             <div class="col-lg-6">
                 <div class="accordion" id="accordionFAQ2">
 
-                    <?php 
+                    <?php
                     $j = 1;
                     foreach ($right_faqs as $post):
                         setup_postdata($post);
@@ -630,8 +633,8 @@ get_header();
                             </div>
                         </div>
 
-                    <?php 
-                    $j++;
+                    <?php
+                        $j++;
                     endforeach;
                     wp_reset_postdata();
                     ?>
@@ -651,12 +654,12 @@ get_header();
         <div class="row g-5 align-items-center">
 
             <?php
-                // TEAM SECTION FIELDS (NEW VARIABLES)
-                $team_sec_tag         = get_field('team_tag_text');
-                $team_sec_heading     = get_field('team_main_heading');
-                $team_sec_description = get_field('team_heading_description_text');
-                $team_sec_btn_link    = get_field('team_read_more_link');
-                $team_sec_btn_text    = get_field('team_read_more_text');
+            // TEAM SECTION FIELDS (NEW VARIABLES)
+            $team_sec_tag         = get_field('team_tag_text');
+            $team_sec_heading     = get_field('team_main_heading');
+            $team_sec_description = get_field('team_heading_description_text');
+            $team_sec_btn_link    = get_field('team_read_more_link');
+            $team_sec_btn_text    = get_field('team_read_more_text');
             ?>
 
             <!-- LEFT SECTION -->
@@ -711,13 +714,13 @@ get_header();
                             <?php foreach ($left_team as $post): setup_postdata($post); ?>
 
                                 <?php
-                                    // NEW VARIABLE NAMES FOR MEMBER
-                                    $member_img  = get_field('team_member_image', $post->ID);
-                                    $member_name = get_field('team_member_name', $post->ID);
-                                    $member_role = get_field('team_member_role', $post->ID);
+                                // NEW VARIABLE NAMES FOR MEMBER
+                                $member_img  = get_field('team_member_image', $post->ID);
+                                $member_name = get_field('team_member_name', $post->ID);
+                                $member_role = get_field('team_member_role', $post->ID);
 
-                                    $delay_val = $delay . "s";
-                                    $delay += 0.4;
+                                $delay_val = $delay . "s";
+                                $delay += 0.4;
                                 ?>
 
                                 <div class="col-12 wow fadeInDownBig" data-wow-delay="<?= $delay_val; ?>">
@@ -725,7 +728,7 @@ get_header();
 
                                         <?php if ($member_img): ?>
                                             <img class="img-fluid rounded-circle p-4"
-                                                 src="<?= esc_url($member_img); ?>" alt="">
+                                                src="<?= esc_url($member_img); ?>" alt="">
                                         <?php endif; ?>
 
                                         <h5 class="mb-0"><?= esc_html($member_name); ?></h5>
@@ -734,7 +737,8 @@ get_header();
                                     </div>
                                 </div>
 
-                            <?php endforeach; wp_reset_postdata(); ?>
+                            <?php endforeach;
+                            wp_reset_postdata(); ?>
 
                         </div>
                     </div>
@@ -746,12 +750,12 @@ get_header();
                             <?php foreach ($right_team as $post): setup_postdata($post); ?>
 
                                 <?php
-                                    $member_img  = get_field('team_member_image', $post->ID);
-                                    $member_name = get_field('team_member_name', $post->ID);
-                                    $member_role = get_field('team_member_role', $post->ID);
+                                $member_img  = get_field('team_member_image', $post->ID);
+                                $member_name = get_field('team_member_name', $post->ID);
+                                $member_role = get_field('team_member_role', $post->ID);
 
-                                    $delay_val = $delay . "s";
-                                    $delay += 0.4;
+                                $delay_val = $delay . "s";
+                                $delay += 0.4;
                                 ?>
 
                                 <div class="col-12 wow fadeInDownBig" data-wow-delay="<?= $delay_val; ?>">
@@ -759,7 +763,7 @@ get_header();
 
                                         <?php if ($member_img): ?>
                                             <img class="img-fluid rounded-circle p-4"
-                                                 src="<?= esc_url($member_img); ?>" alt="">
+                                                src="<?= esc_url($member_img); ?>" alt="">
                                         <?php endif; ?>
 
                                         <h5 class="mb-0"><?= esc_html($member_name); ?></h5>
@@ -768,7 +772,8 @@ get_header();
                                     </div>
                                 </div>
 
-                            <?php endforeach; wp_reset_postdata(); ?>
+                            <?php endforeach;
+                            wp_reset_postdata(); ?>
 
                         </div>
                     </div>
@@ -788,12 +793,12 @@ get_header();
         <div class="row g-5">
 
             <?php
-                // PAGE ACF FIELDS (LEFT SIDE)
-                $testi_tag_text        = get_field('testimonial_tag_text');
-                $testi_heading         = get_field('testimonial_heading');
-                $testi_description     = get_field('testimonial_heading_description');
-                $testi_btn_link        = get_field('testimonial_read_more_link');
-                $testi_btn_text        = get_field('testimonial_read_more_btn_text');
+            // PAGE ACF FIELDS (LEFT SIDE)
+            $testi_tag_text        = get_field('testimonial_tag_text');
+            $testi_heading         = get_field('testimonial_heading');
+            $testi_description     = get_field('testimonial_heading_description');
+            $testi_btn_link        = get_field('testimonial_read_more_link');
+            $testi_btn_text        = get_field('testimonial_read_more_btn_text');
             ?>
 
             <!-- LEFT STATIC SECTION -->
@@ -845,34 +850,34 @@ get_header();
                             $client_role  = get_field('testimonial_client_role');
                     ?>
 
-                        <div class="testimonial-item ps-5">
-                            <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                            <div class="testimonial-item ps-5">
+                                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
 
-                            <?php if ($client_desc): ?>
-                                <p class="fs-4"><?= wp_kses_post($client_desc); ?></p>
-                            <?php endif; ?>
-
-                            <div class="d-flex align-items-center">
-                                
-                                <?php if ($client_img): ?>
-                                    <img class="img-fluid flex-shrink-0 rounded-circle"
-                                        src="<?= esc_url($client_img); ?>"
-                                        style="width: 60px; height: 60px;">
+                                <?php if ($client_desc): ?>
+                                    <p class="fs-4"><?= wp_kses_post($client_desc); ?></p>
                                 <?php endif; ?>
 
-                                <div class="ps-3">
+                                <div class="d-flex align-items-center">
 
-                                    <?php if ($client_name): ?>
-                                        <h5 class="mb-1"><?= esc_html($client_name); ?></h5>
+                                    <?php if ($client_img): ?>
+                                        <img class="img-fluid flex-shrink-0 rounded-circle"
+                                            src="<?= esc_url($client_img); ?>"
+                                            style="width: 60px; height: 60px;">
                                     <?php endif; ?>
 
-                                    <?php if ($client_role): ?>
-                                        <span><?= esc_html($client_role); ?></span>
-                                    <?php endif; ?>
+                                    <div class="ps-3">
 
+                                        <?php if ($client_name): ?>
+                                            <h5 class="mb-1"><?= esc_html($client_name); ?></h5>
+                                        <?php endif; ?>
+
+                                        <?php if ($client_role): ?>
+                                            <span><?= esc_html($client_role); ?></span>
+                                        <?php endif; ?>
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
                     <?php
                         endwhile;
